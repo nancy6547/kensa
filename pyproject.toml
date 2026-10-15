@@ -3,7 +3,7 @@ requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "kensa"
+name = "kensa-rag"
 version = "0.1.0"
 description = "Metamorphic tests for RAG apps: change the input in a known way, check the answer reacts correctly."
 readme = "README.md"
@@ -12,9 +12,16 @@ license = {text = "MIT"}
 authors = [{name = "Nancy Singh"}]
 dependencies = []
 
+keywords = ["rag", "testing", "metamorphic-testing", "llm", "evaluation"]
+classifiers = ["Programming Language :: Python :: 3", "License :: OSI Approved :: MIT License", "Topic :: Software Development :: Testing"]
+
+[project.urls]
+Homepage = "https://github.com/nancy6547/kensa"
+Demo = "https://nancy6547.github.io/demos/kensa/"
+
 [project.optional-dependencies]
-grounded = ["halluguard @ git+https://github.com/nancy6547/halluguard.git"]
-dev = ["pytest", "halluguard @ git+https://github.com/nancy6547/halluguard.git"]
+grounded = ["halluguard-nli>=0.2"]
+dev = ["pytest", "halluguard-nli>=0.2"]
 
 [project.scripts]
 kensa = "kensa.cli:main"
