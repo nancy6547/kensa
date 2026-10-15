@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+*.egg-info/
+.env
+kensa-report.md
+kensa-report.json
+kensa-report.html
+*.zip
+.pytest_cache/
+examples/docmind/cases.jsonl
